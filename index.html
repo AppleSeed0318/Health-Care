@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Test task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./index.css">
+  <script src="https:/cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./api.js"></script>
+  <script src="https:/cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    
+<header>
+  <div class="header-wrap">
+    <div class="logo"><img src="./assets/TestLogo.png"/></div>
+    <div class="top-nav-menu">
+      <ul>
+        <li> <i class="fal fa-home-alt"></i>Overview </li>
+        <li> <i class="fas fa-user-friends"></i>Patients </li>
+        <li> <i class="fal fa-calendar"></i>Schedule </li>
+        <li> <i class="far fa-comment-alt"></i>Message </li>
+        <li> <i class="fas fa-window-maximize"></i>Transactions </li> 
+      </ul>
+    </div>
+    <div class="header-user-info">
+      <div class="header-user-info-icon"><img src="./assets//Layer 8.png"/></div>
+      <div class="header-user-info-text">
+        <p><strong>Dr.Jose Simmons</strong></p>
+        <p>General Practitioner</p>
+      </div>
+      <div class="setting">
+        <i class="far fa-cog"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  
+  <nav class="nav-patients">
+    <div class="patients-wrap">
+      <div class="patients-header">
+        <h2>Patient</h2>
+        <div class="search-icon"><img src="./assets/search_icon.png"/></div>
+      </div>
+      <div class="patients-container" id = "patient_container">
+      </div>
+    </div>
+  </nav>
+  
+  <div class="main-container">
+    <div class="diagnosis-history-wrap">
+      <h2>Diagnosis History</h2>
+      <div class="blood-pressure-container">
+        <div class="blood-pressure-chart">
+          <div class="blood-pressure-chart-header">
+            <h4>Blood Pressure</h4>
+          </div>
+          <div class="blood-pressure-chart-body">
+            <canvas id="health-chart"></canvas>
+          </div>
+        </div>
+        <div class="blood-pressure-detail">
+          <div class="pressure-detail-item blood-pressure-detail-systolic">
+            <p><span></span> Systolic</p>
+            <p>160</p>
+            <p>Higher than Average</p>
+          </div>
+          <hr/>
+          <div class="pressure-detail-item blood-pressure-detail-diastolic">
+            <p><span></span> Diastolic</p>
+            <p>78</p>
+            <p>Lower than Average</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="diagnosis-analyze-result">
+
+      <div class="diagnosis-analyze-result-item respiratory">
+        <div class="analyze-icon">
+          <img src="./assets/respiratory rate.png"/>
+        </div>
+        <p>Respiratory Rate</p>
+        <p>20 bpm</p>
+        <p>Normal</p>
+      </div>
+
+      <div class="diagnosis-analyze-result-item temperature">
+        <div class="analyze-icon">
+          <img src="./assets/temperature.png"/>
+        </div>
+        <p>Respiratory Rate</p>
+        <p>98.6'F</p>
+        <p>Normal</p>
+      </div>
+
+      <div class="diagnosis-analyze-result-item heart-rate">
+        <div class="analyze-icon">
+          <img src="./assets/HeartBPM.png"/>
+        </div>
+        <p>Respiratory Rate</p>
+        <p>78 bpm</p>
+        <p>Normal</p>
+      </div>
+
+    </div>
+
+    <div class="diagnosis-list">
+      <h2>Diagnosis List</h2>
+      <div class="diagnosis-list-table">
+        <table style="height:50px;">
+          <thead>
+            <tr>
+              <th>Problem/Diagnosis</th>
+              <th>Description</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+            <tr>
+              <td>Hypertension</td>
+              <td>Chronic high blood pressure</td>
+              <td>Under Observation</td>
+            </tr>
+          </tbody>
+          
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <nav class="right-nav">
+    <div class="user-detail-wrap">
+      <div class="user-detail-avatar">
+        <img id="user-detail-avatar-img" src="./assets/Layer 8.png">
+      </div>
+      <p class="user-detail-name">Jessica Taylor</p>
+      <br/>
+
+      <ul>
+        <li class="user-detail-info user-detail-birth">
+          <div class="user-detail-icon">
+            <img src="./assets/BirthIcon.png">
+          </div>
+          <div class="user-detail-text">
+            <p>Date Of Birth</p>
+            <p id="user-detail-text-birth">Female</p>
+          </div>
+        </li>
+
+        <li class="user-detail-info user-detail-birth">
+          <div class="user-detail-icon">
+            <img src="./assets/BirthIcon.png">
+          </div>
+          <div class="user-detail-text">
+            <p>Gender</p>
+            <p id="user-detail-text-gender">Female</p>
+          </div>
+        </li>
+
+        <li class="user-detail-info user-detail-birth">
+          <div class="user-detail-icon">
+            <img src="./assets/BirthIcon.png">
+          </div>
+          <div class="user-detail-text">
+            <p>Contact Info.</p>
+            <p id="user-detail-text-contact">Female</p>
+          </div>
+        </li>
+
+        <li class="user-detail-info user-detail-birth">
+          <div class="user-detail-icon">
+            <img src="./assets/BirthIcon.png">
+          </div>
+          <div class="user-detail-text">
+            <p>Emergency Contacts</p>
+            <p id="user-detail-text-emergency">Female</p>
+          </div>
+        </li>
+
+        <li class="user-detail-info user-detail-birth">
+          <div class="user-detail-icon">
+            <img src="./assets/BirthIcon.png">
+          </div>
+          <div class="user-detail-text">
+            <p>Insurance Provider</p>
+            <p id="user-detail-text-provider">Female</p>
+          </div>
+        </li>
+      </ul>
+
+      <button>Show All Information</button>
+    </div>
+    <div class="lab-results">
+      <h2>Lab Results</h2>
+      <ul>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+        <li class="lab-results-item"><p>Blood Tests</p> <div><img src="./assets/download_icon.png"/></div></li>
+
+      </ul>
+    </div>
+  </nav>
+  
+</section>
+
+
+<script src="./blood_pressure_chart.js"></script>
+
+</body>
+</html>
+
